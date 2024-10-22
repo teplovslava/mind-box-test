@@ -26,10 +26,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .deleteBtn {
     color: variables.$color-primary;
     font-size: 1.6rem;
     cursor: pointer;
+    align-self: flex-end;
 }
