@@ -1,0 +1,44 @@
+@use "../../assets/style/variables";
+
+.form {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 2rem;
+    flex-shrink: 0;
+
+    &__input {
+        font-size: 1.6rem;
+        width: 100%;
+        background-color: variables.$color-secondary;
+        border: 0;
+        padding: 2rem;
+        outline: 0;
+        color: variables.$color_light;
+        padding-right: 14rem;
+
+        &:placeholder-shown+.form__button {
+            right: -100%;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 2rem;
+        padding: 0.8rem 1.6rem;
+        font-size: 1.6rem;
+        background-color: variables.$color-primary;
+        border-radius: 1.2rem;
+        cursor: pointer;
+        transition: right variables.$transition-time-function;
+        will-change: rightf;
+        color: variables.$color-secondary;
+    }
+}
+
+.error {
+    color: red;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,32 @@
+@use "../../assets/style/variables";
+
+.item__title {
+    padding: .5rem 0;
+    font-size: 1.6rem;
+    color: variables.$color-light;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 2px;
+        background-color: variables.$color-primary;
+        ;
+        transition: width variables.$transition-time-function;
+    }
+
+    &_completed {
+        &::after {
+            width: 100%;
+        }
+    }
+}

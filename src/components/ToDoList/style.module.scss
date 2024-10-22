@@ -1,0 +1,50 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.item {
+    display: grid;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    will-change: grid-template-rows;
+    animation: enterAnim .3s ease-in-out both;
+    grid-template-rows: 1fr;
+    padding: 2rem 0rem;
+    opacity: 1;
+
+    &_hidden {
+        grid-template-rows: 0fr;
+        padding: 0 2rem;
+        opacity: 0;
+        animation: exitAnim .3s ease-in-out both;
+    }
+}
+
+@keyframes enterAnim {
+    0% {
+        grid-template-rows: 0fr;
+        padding: 0rem;
+        opacity: 0;
+    }
+    100% {
+        grid-template-rows: 1fr;
+        padding: 2rem 0;
+        opacity: 1;
+    }
+}
+
+@keyframes exitAnim {
+    0% {
+        grid-template-rows: 1fr;
+        padding: 2rem 0;
+        opacity: 1;
+    }
+    100% {
+        grid-template-rows: 0fr;
+        padding: 0rem;
+        opacity: 0;
+    }
+}

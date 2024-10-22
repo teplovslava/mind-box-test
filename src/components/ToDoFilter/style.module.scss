@@ -1,0 +1,35 @@
+@use '../../assets/style/variables';
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    &__item {
+        padding: .5rem;
+        border-radius: .5rem;
+        font-size: 1.4rem;
+        border: .1rem solid variables.$color-secondary;
+        color: variables.$color-secondary;
+        cursor: pointer;
+
+        &_active {
+            border: .1rem solid variables.$color-light;
+            color: variables.$color-light;
+        }
+    }
+}
+
+.underHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteBtn {
+    color: variables.$color-primary;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
